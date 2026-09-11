@@ -675,22 +675,28 @@ a {
 
 .conference-plot-grid {
   display: grid;
+  align-items: start;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .conference-result {
+  min-width: 0;
   margin: 0;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.025);
+  overflow: hidden;
 }
 
 .conference-result img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  aspect-ratio: auto;
   background: #fff;
+  object-fit: fill;
 }
 
 .conference-result figcaption {
