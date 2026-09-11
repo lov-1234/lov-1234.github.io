@@ -50,6 +50,11 @@
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a
+          class="nav-download"
+          href="assets/CV/Lovnesh_Bhardwaj_CV.pdf"
+          download="Lovnesh_Bhardwaj_CV.pdf"
+        >Download CV <span aria-hidden="true">↓</span></a>
         <a class="nav-contact" href="mailto:lovneshbhardwaj@gmail.com">Get in touch</a>
       </nav>
     </header>
@@ -63,7 +68,7 @@
         </h1>
         <div class="hero-lower">
           <p class="hero-summary">
-            I’m Lovnesh Bhardwaj, a software engineer and AI researcher focused on representation
+            I'm Lovnesh Bhardwaj, a software engineer and AI researcher focused on representation
             learning, information theory, and machine learning systems—from real-time energy data
             to structured latent representations.
           </p>
@@ -191,14 +196,38 @@
 
         <div class="research-intro">
           <p>
-            My current work asks a deceptively simple question: how much information does a useful
-            representation actually need—and where should that information live?
+           I'm interested in the intersection of information theory, representation learning, and machine learning systems. My research focuses on how information is encoded, compressed, and utilized in latent spaces, and how these principles can be applied to real-world problems in energy systems, data analysis, biological systems, and AI research.
+           In addition to which, I am also focusing on interpretability and new training paradigms in NLP and generative models, exploring how these can enhance model performance and understanding in Transformers and other architectures.
           </p>
         </div>
 
-        <div class="research-grid">
-          <article class="research-card research-card-featured">
-            <span class="card-index">Thesis · MSc · In progress</span>
+        <div class="research-sections">
+          <article class="research-entry research-entry-bachelor" id="bachelor-thesis">
+            <span class="card-index">Thesis · BSc</span>
+            <h3>Cryptocurrency Market Modelling Using Causal Inference & Sentiment Analysis</h3>
+            <p>
+              A causal inference pipeline combining VADER sentiment analysis with causal methods to
+              evaluate the effect of social sentiment on cryptocurrency markets. The study found no
+              significant causal effect of Twitter sentiment on returns at standard significance levels however, at higher significance levels a weak causal effect from the currency movement to Twitter sentiment was observed.
+            </p>
+            <figure class="bachelor-figure">
+              <img
+                src="assets/BT_images/al04.png"
+                alt="Directed causal graph of relationships among cryptocurrency price movements and social sentiment"
+                width="1918"
+                height="1226"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Estimated causal structure across cryptocurrency returns and social sentiment. Currencies have a $ sign in front, sentiments don't.</figcaption>
+            </figure>
+            <a href="https://github.com/lov-1234/BachelorProject2023" target="_blank" rel="noreferrer">
+              View repository <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="research-entry research-entry-master" id="master-thesis">
+            <span class="card-index">Thesis · MSc</span>
             <h3>Information Requirements and Allocation in Latent Representations</h3>
             <p>
               A rate-distortion and information-theoretic framework for optimal latent compression.
@@ -207,66 +236,236 @@
               information bottlenecks govern the emergence and collapse of latent dimensions.
             </p>
             <p>
-              It also defines a disentanglement method that allocates information only to dimensions
+              It also defines a disentanglement method to isolate the generative factors of the dataset that allocates information only to dimensions
               relevant to the task while suppressing nuisance information.
             </p>
-            <a href="https://github.com/lov-1234/rgvae" target="_blank" rel="noreferrer">
-              View related implementation <span aria-hidden="true">↗</span>
-            </a>
-          </article>
+            <div class="research-entry-links">
+              <a href="#thesis-traversals">
+                Explore the qualitative result <span aria-hidden="true">↓</span>
+              </a>
+              <a href="https://github.com/lov-1234/rgvae" target="_blank" rel="noreferrer">
+                View related implementation <span aria-hidden="true">↗</span>
+              </a>
+            </div>
 
-          <article class="research-card">
-            <span class="card-index">Thesis · BSc</span>
-            <h3>Cryptocurrency Market Modelling Using Causal Inference & Sentiment Analysis</h3>
+            <section class="traversal-study traversal-study-compact" id="thesis-traversals" aria-labelledby="traversal-title">
+          <div class="traversal-heading">
+            <div>
+              <span class="eyebrow">Master thesis · Qualitative result</span>
+              <h3 id="traversal-title">Disentanglement, dimension by dimension.</h3>
+            </div>
             <p>
-              A causal inference pipeline combining VADER sentiment analysis with causal methods to
-              evaluate the effect of social sentiment on cryptocurrency markets. The study found no
-              significant causal effect of Twitter sentiment on returns at standard significance levels.
+              Each loop varies one active latent coordinate while
+              holding the remaining coordinates fixed. The resulting single-factor changes provide a
+              qualitative view of the representation learned by the model.
             </p>
-            <a href="https://github.com/lov-1234/BachelorProject2023" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article class="research-card">
-            <span class="card-index">Conference</span>
-            <h3>Innovation in Dynamic Network Modelling</h3>
-            <p>
-              Presented through the Bernoulli Society for Mathematical Statistics and Probability.
-              Modeled patent citation dynamics using Relational Event Models with sampled partial
-              likelihood, combining endogenous network effects with time-varying textual and
-              technological similarity. Content similarity and preferential attachment emerged as the
-              dominant drivers of citation propensity.
-            </p>
-          </article>
-        </div>
-
-        <div class="manuscripts">
-          <div class="manuscripts-title">
-            <span class="eyebrow">Manuscripts in preparation</span>
-            <span>03 works</span>
           </div>
-          <article class="manuscript">
-            <span>01</span>
-            <div>
-              <h3>Relevance-Aware β-TCVAE</h3>
-              <p>Decomposes the ELBO into relevance-aware components, applying sign-asymmetric, per-dimension mutual-information weighting to reward task-relevant information and suppress nuisance dimensions.</p>
+
+          <article class="traversal-dataset" aria-labelledby="dsprites-title">
+            <header class="dataset-heading">
+              <div>
+                <span class="dataset-index">Dataset 01</span>
+                <h4 id="dsprites-title">dSprites</h4>
+              </div>
+              <p>Five active latent dimensions</p>
+            </header>
+            <div class="traversal-grid traversal-grid-five">
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/dsprites/active_dim_02.gif" data-static-src="assets/MT_Images/checkpoint_traversals/active_dim_02/step_04.png" alt="dSprites traversal for latent dimension z2" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Size</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/dsprites/active_dim_04.gif" data-static-src="assets/MT_Images/checkpoint_traversals/active_dim_04/step_04.png" alt="dSprites traversal for latent dimension z4" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Position</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/dsprites/active_dim_05.gif" data-static-src="assets/MT_Images/checkpoint_traversals/active_dim_05/step_04.png" alt="dSprites traversal for latent dimension z5" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Shape</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/dsprites/active_dim_06.gif" data-static-src="assets/MT_Images/checkpoint_traversals/active_dim_06/step_04.png" alt="dSprites traversal for latent dimension z6" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Rotation</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/dsprites/active_dim_07.gif" data-static-src="assets/MT_Images/checkpoint_traversals/active_dim_07/step_04.png" alt="dSprites traversal for latent dimension z7" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Position</span></figcaption>
+              </figure>
             </div>
           </article>
-          <article class="manuscript">
-            <span>02</span>
-            <div>
-              <h3>TIBO — Task Information Bound</h3>
-              <p>Establishes a unified task-information bracket between intrinsic rate-distortion and observation reconstruction rate. It recovers classical bounds as special cases and shows that forcing independent task components into disjoint latent groups creates a capacity-fragmentation gap.</p>
+
+          <article class="traversal-dataset" aria-labelledby="shapes-title">
+            <header class="dataset-heading">
+              <div>
+                <span class="dataset-index">Dataset 02</span>
+                <h4 id="shapes-title">Shapes3D</h4>
+              </div>
+              <p>Six active latent dimensions</p>
+            </header>
+            <div class="traversal-grid">
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_00.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_00/step_04.png" alt="Shapes3D traversal for latent dimension z0" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Object Hue</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_01.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_01/step_04.png" alt="Shapes3D traversal for latent dimension z1" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Wall Hue</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_02.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_02/step_04.png" alt="Shapes3D traversal for latent dimension z2" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Size</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_03.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_03/step_04.png" alt="Shapes3D traversal for latent dimension z3" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Floor Hue</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_06.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_06/step_04.png" alt="Shapes3D traversal for latent dimension z6" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Orientation</span></figcaption>
+              </figure>
+              <figure class="traversal-item">
+                <img src="assets/MT_Images/gifs/shapes3d/active_dim_07.gif" data-static-src="assets/MT_Images/shapes_traversals/active_dim_07/step_04.png" alt="Shapes3D traversal for latent dimension z7" width="64" height="64" loading="lazy" decoding="async" />
+                <figcaption><span>Shapes</span></figcaption>
+              </figure>
             </div>
           </article>
-          <article class="manuscript">
-            <span>03</span>
-            <div>
-              <h3>TIGA-Med — Task-Information-Guided Attention</h3>
-              <p>A task-information-guided Transformer for multi-label fundus diagnosis that learns disease-shared, disease-specific, or inactive attention heads under KL-based information budgets, enabling structural pruning and causal interpretability tests.</p>
+            </section>
+
+          </article>
+
+          <article class="research-entry conference-section" id="conference-poster">
+            <div class="conference-copy">
+              <span class="card-index">Conference · Poster</span>
+              <h3>Innovation in Dynamic Network Modelling</h3>
+              <p>
+                Presented a poster at the Università della Svizzera italiana workshop on dynamic
+                network modelling. I modelled patent citation dynamics using Relational Event Models
+                with sampled partial likelihood, combining endogenous network effects with
+                time-varying textual and technological similarity. Content similarity and
+                preferential attachment emerged as the dominant drivers of citation propensity.
+              </p>
+              <div class="research-entry-links">
+                <a href="https://www.ci.inf.usi.ch/innodyn/" target="_blank" rel="noreferrer">
+                  View workshop page <span aria-hidden="true">↗</span>
+                </a>
+                <a href="assets/conference/poster.pdf" target="_blank" rel="noreferrer">
+                  Open complete poster <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="conference-results" aria-label="Selected results from the conference poster">
+              <section class="conference-result-group" aria-labelledby="shared-effects-title">
+                <header class="conference-result-heading">
+                  <span>Models 1 &amp; 2</span>
+                  <div>
+                    <h4 id="shared-effects-title">Shared effects</h4>
+                    <p>These covariates are included in both model specifications.</p>
+                  </div>
+                </header>
+                <div class="conference-plot-grid">
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/receiver_pub_yr.png" alt="Effect of receiver publication year" width="1022" height="902" loading="lazy" decoding="async" />
+                    <figcaption>Receiver publication year</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/lag.png" alt="Effect of citation lag" width="1024" height="902" loading="lazy" decoding="async" />
+                    <figcaption>Citation lag</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/receiver_indegree.png" alt="Effect of receiver indegree" width="772" height="682" loading="lazy" decoding="async" />
+                    <figcaption>Receiver indegree</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/receiver_outdegree.png" alt="Effect of receiver outdegree" width="774" height="682" loading="lazy" decoding="async" />
+                    <figcaption>Receiver outdegree</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/cuml_citations_received.png" alt="Effect of cumulative citations received" width="774" height="680" loading="lazy" decoding="async" />
+                    <figcaption>Cumulative citations received</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/time_from_last_event.png" alt="Effect of time since the last event" width="774" height="680" loading="lazy" decoding="async" />
+                    <figcaption>Time since last event</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/jaccard_sim.png" alt="Effect of Jaccard similarity" width="774" height="680" loading="lazy" decoding="async" />
+                    <figcaption>Jaccard similarity</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/textual_sim.png" alt="Effect of textual similarity" width="774" height="680" loading="lazy" decoding="async" />
+                    <figcaption>Textual similarity</figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="conference-result-group" aria-labelledby="model-two-effects-title">
+                <header class="conference-result-heading">
+                  <span>Model 2</span>
+                  <div>
+                    <h4 id="model-two-effects-title">Additional effects</h4>
+                    <p>Model 2 adds two time-varying similarity features.</p>
+                  </div>
+                </header>
+                <div class="conference-plot-grid">
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/event_yr_by_sim_model_2.png" alt="Model 2 effect of event year by textual similarity" width="790" height="696" loading="lazy" decoding="async" />
+                    <figcaption>Textual similarity over time</figcaption>
+                  </figure>
+                  <figure class="conference-result">
+                    <img src="assets/Bernoulli_WKSHOP/event_yr_jac_sim_model_2.png" alt="Model 2 effect of event year by Jaccard similarity" width="790" height="696" loading="lazy" decoding="async" />
+                    <figcaption>Jaccard similarity over time</figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <aside class="conference-conclusion" aria-labelledby="conference-conclusion-title">
+                <span>Conclusion</span>
+                <div>
+                  <h4 id="conference-conclusion-title">Similarity is the clearest citation signal.</h4>
+                  <p>
+                    Textual and technological-class similarity, together with cumulative citations,
+                    have the strongest influence on whether a patent is cited. Receiver publication
+                    year has a non-linear effect that peaks around 2000; higher receiver outdegree is
+                    associated with greater citation propensity, while higher indegree is associated
+                    with less. Citation lag is not statistically significant (<i>p</i> = 0.77).
+                    Model 2 indicates that technological-class similarity weakened over time and that
+                    the textual-similarity effect peaked around 2000, although Model 1 achieved a
+                    marginally lower AIC by 0.1.
+                  </p>
+                </div>
+              </aside>
             </div>
           </article>
+
+          <section class="research-manuscripts" aria-labelledby="manuscripts-title">
+            <header class="manuscripts-title">
+              <span class="card-index">Ongoing research</span>
+              <h3 id="manuscripts-title">Manuscripts in preparation</h3>
+              <span>01 work</span>
+            </header>
+            <article class="manuscript">
+              <span>01</span>
+              <div>
+                <h3>Relevance-Gated β-TCVAE</h3>
+                <p>A thesis-derived RG-β-VAE objective that decomposes the ELBO into relevance-aware components, applying sign-asymmetric, per-dimension mutual-information weighting to reward task-relevant information and suppress nuisance dimensions.</p>
+                <a class="manuscript-link" href="#thesis-traversals">View the animations <span aria-hidden="true">↑</span></a>
+              </div>
+            </article>
+            <!-- <article class="manuscript">
+              <span>02</span>
+              <div>
+                <h3>TIBO — Task Information Bound</h3>
+                <p>Establishes a unified task-information bracket between intrinsic rate-distortion and observation reconstruction rate. It recovers classical bounds as special cases and shows that forcing independent task components into disjoint latent groups creates a capacity-fragmentation gap.</p>
+              </div>
+            </article>
+            <article class="manuscript">
+              <span>03</span>
+              <div>
+                <h3>TIGA-Med — Task-Information-Guided Attention</h3>
+                <p>A task-information-guided Transformer for multi-label fundus diagnosis that learns disease-shared, disease-specific, or inactive attention heads under KL-based information budgets, enabling structural pruning and causal interpretability tests.</p>
+              </div>
+            </article> -->
+          </section>
         </div>
       </section>
 
@@ -388,10 +587,11 @@
         <div class="education-layout">
           <div class="education-list">
             <article class="education-item">
-              <span class="education-date">Expected 2026</span>
+              <span class="education-date">2026</span>
               <div>
                 <p class="eyebrow">Università della Svizzera italiana · Lugano</p>
                 <h3>MSc · Artificial Intelligence</h3>
+                <p>Magna Cum Laude</p>
               </div>
             </article>
             <article class="education-item">
@@ -408,7 +608,7 @@
             <p class="eyebrow">Selected recognition</p>
             <article>
               <span>2017</span>
-              <p><strong>New York Academy of Sciences</strong><br />Invited to present a food fortification project analyzing nutrient deficiencies and non-invasive food solutions.</p>
+              <p><strong>New York Academy of Sciences</strong><br />Invited to present a food fortification project analyzing nutrient deficiencies and non-invasive food solutions to present amongst world-renowned scientists including nobel laureates.</p>
             </article>
             <article>
               <span>2015</span>

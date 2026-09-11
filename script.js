@@ -1,5 +1,12 @@
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (reducedMotion) {
+  document.querySelectorAll("img[data-static-src]").forEach((image) => {
+    image.src = image.dataset.staticSrc;
+  });
+}
 
 menuButton?.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -36,9 +43,9 @@ const activeSectionObserver = new IntersectionObserver(
 
 sections.forEach((section) => activeSectionObserver.observe(section));
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (!reducedMotion) {
   const revealTargets = document.querySelectorAll(
-    ".timeline-item, .research-card, .manuscript, .project, .education-item, .achievements article",
+    ".timeline-item, .research-entry, .research-manuscripts, .conference-result, .project, .education-item, .achievements article",
   );
 
   const revealObserver = new IntersectionObserver(
