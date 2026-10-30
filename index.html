@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="https://lov-1234.github.io/og.png" />
     <meta name="twitter:image:alt" content="Lovnesh Bhardwaj — AI Researcher & Engineer" />
     <title>Lovnesh Bhardwaj — AI Researcher & Engineer</title>
-    <link rel="stylesheet" href="styles.css?v=20260911-3" />
+    <link rel="stylesheet" href="styles.css?v=20261030-1" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -52,7 +52,7 @@
         <a href="#education">Education</a>
         <a
           class="nav-download"
-          href="assets/CV/Lovnesh_Bhardwaj_CV.pdf"
+          href="assets/CV/Lovnesh_Bhardwaj_CV.pdf?v=20261030"
           download="Lovnesh_Bhardwaj_CV.pdf"
         >Download CV <span aria-hidden="true">↓</span></a>
         <a class="nav-contact" href="mailto:lovneshbhardwaj@gmail.com">Get in touch</a>
@@ -68,9 +68,9 @@
         </h1>
         <div class="hero-lower">
           <p class="hero-summary">
-            I'm Lovnesh Bhardwaj, a software engineer and AI researcher focused on representation
-            learning, information theory, and machine learning systems—from real-time energy data
-            to structured latent representations.
+            I'm Lovnesh Bhardwaj, a software engineer and AI researcher working across information
+            theory, interpretable machine learning, probabilistic modelling, and forecasting systems—from
+            real-time energy markets to structured latent representations.
           </p>
           <div class="hero-actions">
             <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
@@ -113,7 +113,7 @@
         <div class="skills-grid">
           <article class="skill-block">
             <span class="skill-label">Languages</span>
-            <p>Python, Java, C/C++, MATLAB, R, C#</p>
+            <p>Python, Java, C/C++, MATLAB, R</p>
           </article>
           <article class="skill-block">
             <span class="skill-label">Frameworks & tools</span>
@@ -121,7 +121,7 @@
           </article>
           <article class="skill-block">
             <span class="skill-label">Expertise</span>
-            <p>Software engineering, machine learning, data science, representation learning</p>
+            <p>Information theory, interpretable ML, probabilistic modelling, time-series forecasting</p>
           </article>
         </div>
       </section>
@@ -140,14 +140,13 @@
             </div>
             <div class="timeline-content">
               <p class="eyebrow">DXT Commodities</p>
-              <h3>Developer</h3>
+              <h3>Developer · Part-time</h3>
               <ul>
-                <li>Led the design and deployment of a centralized log aggregation system using the ELK stack and Docker, improving monitoring and debugging across internal services.</li>
-                <li>Built crawlers and scrapers for internal CRON job reports, automating data collection and operational analysis.</li>
-                <li>Built a WebSocket-based pipeline for high-frequency energy market data, enabling low-latency analysis and real-time anomaly detection for out-of-distribution bids and offers.</li>
-                <li>Built machine learning pipelines for electricity price forecasting through supply-and-demand curve modeling and time-series analysis.</li>
-                <li>Contributed to generative AI systems for solar radiation forecasting from satellite imagery, outperforming ECMWF forecasts up to four hours ahead on MAE and RMSE.</li>
-                <li>Developed a predictive optimization framework for hydroelectric operations using shadow pricing, stochastic inflow forecasts, GNNs, Transformers, and convex optimization.</li>
+                <li>Developed supply-and-demand curve forecasts for day-ahead electricity prices in Italy's NORD zone, combining historical auction curves with weather forecasts and market fundamentals; built calendar-matched and fundamentals-adjusted baselines and trained monotonicity-constrained neural models on bucketed curves.</li>
+                <li>Built a hydroelectric scheduling and water-value framework that combined inflow models, Terna storage and generation data, ECMWF inputs, and constrained optimisation; benchmarked seasonal and weather-based regressions against neural networks across multiple random seeds.</li>
+                <li>Implemented linear programming with a three-week rolling horizon to estimate water shadow prices, compared model valuations with MGP offer-price distributions, and developed a week-ahead forecast of hydroelectric supply offered at €0/MWh.</li>
+                <li>Contributed to transformer-based solar-radiation forecasting from satellite imagery, outperforming ECMWF forecasts up to four hours ahead on MAE and RMSE.</li>
+                <li>Built a WebSocket pipeline for high-frequency energy-market data, enabling low-latency analysis and real-time anomaly detection for out-of-distribution bids and offers.</li>
               </ul>
             </div>
           </article>
@@ -196,8 +195,11 @@
 
         <div class="research-intro">
           <p>
-           I'm interested in the intersection of information theory, representation learning, and machine learning systems. My research focuses on how information is encoded, compressed, and utilized in latent spaces, and how these principles can be applied to real-world problems in energy systems, data analysis, biological systems, and AI research.
-           In addition to which, I am also focusing on interpretability and new training paradigms in NLP and generative models, exploring how these can enhance model performance and understanding in Transformers and other architectures.
+            My research spans information theory and representation learning, interpretable and
+            explainable machine learning, probabilistic modelling and uncertainty quantification,
+            time-series forecasting and spatiotemporal learning, and causal inference with numerical
+            optimisation. I am particularly interested in how models allocate information, encode
+            market structure, and support reliable decisions in generative and energy systems.
           </p>
         </div>
 
@@ -439,7 +441,7 @@
 
           <section class="research-manuscripts" aria-labelledby="manuscripts-title">
             <header class="manuscripts-title">
-              <span class="card-index">Ongoing research</span>
+              <span class="card-index">In preparation</span>
               <h3 id="manuscripts-title">Manuscripts in preparation</h3>
               <span>01 work</span>
             </header>
@@ -447,7 +449,7 @@
               <span>01</span>
               <div>
                 <h3>Relevance-Gated β-TCVAE</h3>
-                <p>A thesis-derived RG-β-VAE objective that decomposes the ELBO into relevance-aware components, applying sign-asymmetric, per-dimension mutual-information weighting to reward task-relevant information and suppress nuisance dimensions.</p>
+                <p>Designs a relevance-gated objective that decomposes the ELBO into relevance-aware components, using sign-asymmetric, per-dimension mutual-information weighting to reward information in task-relevant latent dimensions and suppress nuisance information. The resulting asymmetric incentives construct a learned partition of latent space and achieve competitive performance against state-of-the-art networks.</p>
                 <a class="manuscript-link" href="#thesis-traversals">View the animations <span aria-hidden="true">↑</span></a>
               </div>
             </article>
@@ -465,7 +467,28 @@
                 <p>A task-information-guided Transformer for multi-label fundus diagnosis that learns disease-shared, disease-specific, or inactive attention heads under KL-based information budgets, enabling structural pruning and causal interpretability tests.</p>
               </div>
             </article> -->
-            
+          </section>
+
+          <section class="research-manuscripts" aria-labelledby="ongoing-research-title">
+            <header class="manuscripts-title">
+              <span class="card-index">Current directions</span>
+              <h3 id="ongoing-research-title">Ongoing research</h3>
+              <span>02 tracks</span>
+            </header>
+            <article class="manuscript">
+              <span>01</span>
+              <div>
+                <h3>Mechanistic Interpretability of Transformer-Based Electricity Forecasts</h3>
+                <p>Investigates activation patching, attention analysis, and sparse autoencoders to identify the components responsible for forecasts at different horizons, with targeted ablations testing their causal contribution.</p>
+              </div>
+            </article>
+            <article class="manuscript">
+              <span>02</span>
+              <div>
+                <h3>Power-Market Structure in Time-Series Foundation Models</h3>
+                <p>Studies whether model representations encode electricity-market fundamentals and merit-order relationships, and how those representations change after fine-tuning on market data.</p>
+              </div>
+            </article>
           </section>
         </div>
       </section>
@@ -484,6 +507,18 @@
             </div>
             <h3>Spatiotemporal GNNs for Numerical Weather Prediction</h3>
             <p>Designed and evaluated spatiotemporal GNNs to postprocess wind-speed ensemble forecasts across 152 Swiss weather stations. A MultiScale Graph WaveNet improved CRPS by 5% over strong spatiotemporal baselines.</p>
+          </article>
+
+          <article class="project">
+            <div class="project-meta"><span>Climate Modelling · Neural ODEs</span><span aria-hidden="true">—</span></div>
+            <h3>ClimODE Reproducibility Challenge</h3>
+            <p>Reproduced the training and evaluation pipeline of ClimODE, a physics-informed Neural ODE framework for climate and weather forecasting. Ran GPU experiments and evaluated released checkpoints to assess the reproducibility of the reported results.</p>
+          </article>
+
+          <article class="project">
+            <div class="project-meta"><span>Natural Language Processing</span><span aria-hidden="true">—</span></div>
+            <h3>Banking Intent Classification</h3>
+            <p>Fine-tuned a transformer for supervised banking-intent classification and benchmarked both classification accuracy and inference latency.</p>
           </article>
 
           <article class="project">
