@@ -584,7 +584,7 @@ a {
   flex-wrap: wrap;
 }
 
-.research-entry-master > .research-entry-links {
+.research-entry > .research-entry-links {
   grid-column: 4 / span 8;
 }
 
@@ -1356,7 +1356,7 @@ a {
   .research-entry > h3,
   .research-entry > p,
   .research-entry > a,
-  .research-entry-master > .research-entry-links,
+  .research-entry > .research-entry-links,
   .bachelor-figure,
   .research-entry-master > .traversal-study {
     grid-column: 3 / -1;
@@ -1537,7 +1537,7 @@ a {
   .research-entry > h3,
   .research-entry > p,
   .research-entry > a,
-  .research-entry-master > .research-entry-links,
+  .research-entry > .research-entry-links,
   .bachelor-figure,
   .research-entry-master > .traversal-study,
   .conference-copy,
